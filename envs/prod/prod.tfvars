@@ -1,1 +1,6 @@
+KKE_ENV                    = "prod"
+KKE_DYNAMODB_TABLE_NAME    = "nautilus-prod-table"
+KKE_SECRET_NAME            = "nautilus-prod-secret"
+KKE_SECRET_VALUE           = "nautilus-prod-value"
+KKE_ELASTICSEARCH_DOMAIN   = "nautilus-prod-es"
 
