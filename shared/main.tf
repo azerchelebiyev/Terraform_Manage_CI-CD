@@ -1,3 +1,7 @@
+provider "aws" {
+  region = "us-east-1"
+}
+
 module "dynamodb" {
   source     = "../../modules/dynamodb"
   table_name = var.KKE_DYNAMODB_TABLE_NAME
