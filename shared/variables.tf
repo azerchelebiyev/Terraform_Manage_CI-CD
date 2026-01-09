@@ -1,20 +1,25 @@
 variable "KKE_ENV" {
-  type = string
+  description = "Environment name (dev or prod)"
+  type        = string
 }
 
 variable "KKE_DYNAMODB_TABLE_NAME" {
-  type = string
+  description = "DynamoDB table name"
+  type        = string
 }
 
 variable "KKE_SECRET_NAME" {
-  type = string
+  description = "Secrets Manager secret name"
+  type        = string
 }
 
 variable "KKE_SECRET_VALUE" {
-  type      = string
-  sensitive = true
+  description = "Secret value"
+  type        = string
+  sensitive   = true
 }
 
 variable "KKE_ELASTICSEARCH_DOMAIN" {
-  type = string
+  description = "Elasticsearch domain name"
+  type        = string
 }
