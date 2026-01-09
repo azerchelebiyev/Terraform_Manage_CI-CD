@@ -7,5 +7,12 @@ resource "aws_dynamodb_table" "this" {
     name = "id"
     type = "S"
   }
+
+  tags = {
+    Environment = var.env
+  }
 }
 
+output "dynamodb_table_name" {
+  value = aws_dynamodb_table.this.name
+}
