@@ -2,8 +2,11 @@ resource "aws_secretsmanager_secret" "this" {
   name = var.secret_name
 }
 
-resource "aws_secretsmanager_secret_version" "value" {
+resource "aws_secretsmanager_secret_version" "this" {
   secret_id     = aws_secretsmanager_secret.this.id
   secret_string = var.secret_value
 }
 
+output "secret_arn" {
+  value = aws_secretsmanager_secret.this.arn
+}
