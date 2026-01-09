@@ -9,4 +9,3 @@ output "kke_secret_arn" {
 output "kke_elasticsearch_domain_endpoint" {
   value = module.elasticsearch.endpoint
 }
-
