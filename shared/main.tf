@@ -16,7 +16,6 @@ module "elasticsearch" {
   domain_name = var.KKE_ELASTICSEARCH_DOMAIN
 }
 
-# Outputs
 output "Kke_dynamodb_table_name" {
   value = module.dynamodb.dynamodb_table_name
 }
