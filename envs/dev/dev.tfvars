@@ -1,5 +1,0 @@
-KKE_ENV                  = "dev"
-KKE_DYNAMODB_TABLE_NAME   = "nautilus-dev-table"
-KKE_SECRET_NAME           = "nautilus-dev-secret"
-KKE_SECRET_VALUE          = "nautilus-dev-value"
-KKE_ELASTICSEARCH_DOMAIN  = "nautilus-dev-es"
