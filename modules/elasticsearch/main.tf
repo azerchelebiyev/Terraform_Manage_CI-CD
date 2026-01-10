@@ -1,10 +1,9 @@
-resource "aws_elasticsearch_domain" "this" {
-  domain_name = var.domain_name
-
-  elasticsearch_version = "7.10"
+resource "aws_opensearch_domain" "this" {
+  domain_name    = var.domain_name
+  engine_version = "OpenSearch_2.11"
 
   cluster_config {
-    instance_type  = "t2.small.elasticsearch"
+    instance_type  = "t3.small.search"
     instance_count = 1
   }
 
@@ -12,12 +11,4 @@ resource "aws_elasticsearch_domain" "this" {
     ebs_enabled = true
     volume_size = 10
   }
-
-  tags = {
-    Environment = var.env
-  }
-}
-
-output "elasticsearch_domain_endpoint" {
-  value = aws_elasticsearch_domain.this.endpoint
 }
