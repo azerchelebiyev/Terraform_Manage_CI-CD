@@ -8,5 +8,3 @@ resource "aws_dynamodb_table" "this" {
     type = "S"
   }
 }
-
-output "table_name" { value = aws_dynamodb_table.this.name }

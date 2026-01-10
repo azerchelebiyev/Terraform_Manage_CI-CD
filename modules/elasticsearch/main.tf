@@ -6,5 +6,3 @@ resource "aws_elasticsearch_domain" "this" {
     instance_type = "t3.small.elasticsearch"
   }
 }
-
-output "domain_endpoint" { value = aws_elasticsearch_domain.this.endpoint }
