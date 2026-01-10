@@ -1,9 +1,20 @@
-variable "aws_region" {
-  default = "us-east-1"
+variable "KKE_ENV" {
+  type = string
 }
 
-variable "KKE_ENV" {}
-variable "KKE_DYNAMODB_TABLE_NAME" {}
-variable "KKE_SECRET_NAME" {}
-variable "KKE_SECRET_VALUE" {}
-variable "KKE_ELASTICSEARCH_DOMAIN" {}
+variable "KKE_DYNAMODB_TABLE_NAME" {
+  type = string
+}
+
+variable "KKE_SECRET_NAME" {
+  type = string
+}
+
+variable "KKE_SECRET_VALUE" {
+  type = string
+  sensitive = true
+}
+
+variable "KKE_ELASTICSEARCH_DOMAIN" {
+  type = string
+}
