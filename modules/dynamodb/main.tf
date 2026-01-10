@@ -9,4 +9,4 @@ resource "aws_dynamodb_table" "this" {
   }
 }
 
-variable "table_name" {}
+output "table_name" { value = aws_dynamodb_table.this.name }
