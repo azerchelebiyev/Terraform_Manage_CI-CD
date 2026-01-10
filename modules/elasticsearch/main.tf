@@ -5,11 +5,6 @@ resource "aws_elasticsearch_domain" "this" {
   cluster_config {
     instance_type = "t3.small.elasticsearch"
   }
-
-  ebs_options {
-    ebs_enabled = true
-    volume_size = 10
-  }
 }
 
-variable "domain_name" {}
+output "domain_endpoint" { value = aws_elasticsearch_domain.this.endpoint }
